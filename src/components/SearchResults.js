@@ -1,21 +1,20 @@
 import React from "react";
+// import PropTypes from 'prop-types';
 import "../styles/SearchResults.css"
 
 function SearchResults({results}) {
     if (!results.length) {
-        return <p>No results</p>
+        return <p className="result-paraghraph">No results</p>
       }
       else {
   return (
     <>
-      <p className="search-results">
-        Search Results  
+      <div className="image-container">
         {results.map((image) => (
-          <img className="card-image" src={image} alt="spaceImage" />
+          <img className="image" src={image} alt="images of the planet that has been searched example: moon pictures" />
         ))}
-     </p>
+     </div>
     </>
   );
 }}
-
 export default SearchResults;

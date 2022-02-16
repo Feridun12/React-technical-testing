@@ -5,7 +5,9 @@ import Search from "./Search";
 import SearchResults from "./SearchResults";
 
 function App() {
+  //states
   const [searchResults, setSearchResults] = useState([]);
+  // 
   searchResults.map((e) => console.log(e))
   return (
     <div className="App">
@@ -16,5 +18,7 @@ function App() {
     </div>
   );
 }
+
+
 
 export default App;

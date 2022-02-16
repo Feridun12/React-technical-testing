@@ -1,18 +1,22 @@
 import React, { useState } from "react";
+// import PropTypes from 'prop-types';
 import getImages from "../requests/getImages";
 import "../styles/Search.css";
 
-function Search({ setSearchResults }) {
-  const [value, setValue] = useState();
 
+function Search({ setSearchResults }) {
+  // state
+  const [value, setValue] = useState();
+  // 
   const handleSubmit = async (event) => {
     event.preventDefault();
     setSearchResults( await getImages(value));
   };
   return (
-    <div className="search">
+    <div className="search-section">
       <form onSubmit={handleSubmit} className="search-form">
         <input
+        placeholder="Search..."
           onChange={(e) => setValue(e.target.value)}
           type="text"
           className="search-input"
@@ -24,5 +28,6 @@ function Search({ setSearchResults }) {
     </div>
   );
 }
+
 
 export default Search;

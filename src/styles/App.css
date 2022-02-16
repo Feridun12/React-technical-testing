@@ -1,11 +1,51 @@
 .App {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
 
-  }
-  
+.nasa-logo {
+  margin: auto;
+  margin-top: 20px;
+  width: 500px;
+  height: 300px;
+}
+
+/*Media queries */
+@media screen and (max-device-width: 300px) {
   .nasa-logo {
-    margin: auto;
-    width: 500px;
-    height: 300px;
+    margin-left: 5px;
   }
+}
+
+@media screen and (max-device-width: 450px) {
+
+  /* logo style */
+  .nasa-logo {
+    width: 300px;
+  }
+
+  /* Search.js design */
+  .search-section {
+    margin-top: 50px;
+    padding-left: 20px;
+  }
+
+  .search-btn {
+    margin-left: 10px;
+    width: 40px;
+  }
+}
+
+@media screen and (min-device-width: 500px) {
+  /* Search.js design */
+  .search-section {
+    margin-top: 50px;
+    padding-left: 20px;
+  }
+
+  .search-btn {
+    margin-left: 20px;
+    width: 40px;
+  }
+
+}
