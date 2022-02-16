@@ -10,20 +10,32 @@ exports[`App renders correctly:snapshot testing 1`] = `
       class="nasa-logo"
       src="https://cdn.cnn.com/cnnnext/dam/assets/200424060716-nasa-worm-logo.jpg"
     />
-    <form
-      class="search-form"
+    <div
+      class="search"
     >
-      <input
-        class="search-input"
-        type="text"
-      />
-      <button
-        class="search-btn"
-        type="submit"
+      <form
+        class="search-form"
       >
-        Go!
-      </button>
-    </form>
+        <input
+          class="search-input"
+          type="text"
+        />
+        <button
+          class="search-btn"
+          type="submit"
+        >
+          Go!
+        </button>
+      </form>
+    </div>
+    <p>
+       Search Results 
+    </p>
+    <img
+      alt="card_image"
+      class="card-image"
+      src="https://images.unsplash.com/photo-1522030299830-16b8d3d049fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+    />
   </div>
 </DocumentFragment>
 `;

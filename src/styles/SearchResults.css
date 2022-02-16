@@ -1,0 +1,15 @@
+.search-results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+.card-image {
+width: 30%;
+height: 30%;
+margin: 10px;
+padding: 10px;
+}
