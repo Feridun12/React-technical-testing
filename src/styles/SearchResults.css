@@ -7,7 +7,7 @@
   padding: 0 10px;
 }
 
-.card-image {
+.image {
   width: 25%;
   height: 30%;
   margin: 10px;
@@ -16,7 +16,7 @@
 
 /* media queries */
 
-/* @media screen and (min-device-width: 1000px) {
+@media screen and (min-device-width: 1000px) {
     .image-container {
       column-count: 3;
       column-gap: 15px;
@@ -43,16 +43,16 @@
     .search-results > p {
       column-span: all;
     }
-  } */
+  }
 
 @media screen and (max-device-width: 450px) {
-    .card-image {
+    .image {
       width: 300px;
     }
   }
 
 @media screen and (max-device-width: 300px) {
-  .card-image {
+  .image {
     margin-left: 25px;
   }
 }
