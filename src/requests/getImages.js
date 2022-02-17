@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const getImages = (query) => {
+  // setLoading(true);
   if (!query) {
     return Promise.resolve([]);
   } else {
@@ -17,7 +18,10 @@ const getImages = (query) => {
       })
       .catch((err) => {
         console.log(err);
-      });
+      })
+      // .finally(() => {
+      //   setLoading(false);
+      // });
   }
 };
 

@@ -1,10 +1,10 @@
 import React from "react";
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import "../styles/SearchResults.css"
 
 function SearchResults({results}) {
     if (!results.length) {
-        return <p className="result-paraghraph">No results</p>
+        return <p className="result-paraghraph">No results. Please try again later</p>
       }
       else {
   return (
@@ -17,4 +17,8 @@ function SearchResults({results}) {
     </>
   );
 }}
+
+SearchResults.propTypes = {
+  results: PropTypes.array.isRequired,
+}
 export default SearchResults;
