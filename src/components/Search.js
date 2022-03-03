@@ -16,7 +16,7 @@ function Search({ setSearchResults }) {
     <div className="search-section">
       <form onSubmit={handleSubmit} className="search-form">
         <input
-        placeholder="Search..."
+        placeholder="Search NASA's image library "
           onChange={(e) => setValue(e.target.value)}
           type="text"
           className="search-input"
