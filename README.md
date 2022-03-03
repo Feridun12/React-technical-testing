@@ -6,8 +6,10 @@ The users can search for anything space related like "Sun", "Moon" and "Mars". A
 
 During the development process, the app was fully tested using Jest and React Testing Library to write unit tests, following Test-Driven Development (TDD) methodology.
 
-## Screenshots
+## ScreenShots
 
+![Desktop view](./readMeImages/Laptopview.png)
+![Mobile view](./readMeImages//mobile.jpeg)
 
 ## Technologies 
 
@@ -28,16 +30,16 @@ You can either view the live site by [clicking here](https://sad-curran-82905e.n
 
 1. Clone this repository into your terminal:
 
-```bash git clone git@github.com:Feridun12/React-technical-testing.git```
+```git clone git@github.com:Feridun12/React-technical-testing.git```
 
 2. Change directory into the newly created folder and install the project dependencies:
 
-```bash cd tech-test``` 
-```bash npm install```
+```cd tech-test``` 
+```npm install```
 
 3. Start the react app:
 
-```bash npm start```
+```npm start```
 
 A browser window should automatically open with a live version of the app. If this does not happen, navigate to a new browser window and type ```bash http://localhost:3000/``` into the address bar.
 
@@ -47,7 +49,7 @@ A browser window should automatically open with a live version of the app. If th
 
 2. Search button activation when the user presses enter key on the keyboard.
 
-3. Error message when a user enters a invalid query.
+3. Error message when a user enters a invalid query. (updated and done)
 
 4. Improve the loading experience by implementing a loading screen/spinning icon whilst all images are being retrieved from the API and loaded, to avoid jerky loading as at present.
 

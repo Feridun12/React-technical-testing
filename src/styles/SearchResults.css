@@ -6,6 +6,13 @@
   padding: 0 10px;
 }
 
+.result-paraghraph {
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+
 .image {
   border-radius: 20px;
 }
