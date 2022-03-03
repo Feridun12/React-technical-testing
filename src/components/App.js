@@ -1,5 +1,5 @@
 import "../styles/App.css";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 // components
 import Search from "./Search";
 import SearchResults from "./SearchResults";
@@ -11,7 +11,7 @@ import SearchResults from "./SearchResults";
 function App() {
   //states
   const [searchResults, setSearchResults] = useState([]);
-  const [isLoading, setLoading] = useState(true);
+  // const [isLoading, setLoading] = useState(true);
   //
   // useEffect(() => {
   //   getImages(query , setLoading);
