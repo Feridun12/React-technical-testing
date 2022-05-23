@@ -6,7 +6,6 @@ import SearchResults from "./SearchResults";
 // Loading effect
 // import getImages from "../requests/getImages";
 // import ScaleLoader from "react-spinners/ScaleLoader";
-// import getImages from "../requests/getImages";
 
 function App() {
   //states
