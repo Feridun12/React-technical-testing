@@ -23,7 +23,6 @@ function App() {
   //     </div>
   //   );
   // }
-  searchResults.map((e) => console.log(e));
   return (
     <div className="App">
       <img
