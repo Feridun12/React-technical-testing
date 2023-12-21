@@ -15,6 +15,7 @@
 
 .image {
   border-radius: 20px;
+  border: 1px solid white;
 }
 
 /* media queries */
@@ -44,7 +45,6 @@
 }
 
 @media screen and (min-device-width: 450px) and (max-device-width: 1000px) {
-  
   .image {
     margin-top: 20px;
   }
