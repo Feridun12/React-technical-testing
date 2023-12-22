@@ -1,27 +1,32 @@
 import axios from "axios";
 
-const getImages = (query) => {
+const getImages = (value, setValidSearch) => {
   // setLoading(true);
-  if (!query) {
+  if (!value) {
     return Promise.resolve([]);
   } else {
     return axios
-      .get(`https://images-api.nasa.gov/search?q=${query}`)
+      .get(`https://images-api.nasa.gov/search?q=${value}`)
       .then((response) => {
         const imageResults = response.data.collection.items;
-        const parsedImages = imageResults.filter(
-          (item) => item.data[0].media_type === "image"
-        );
-        const images = parsedImages.map((image) => image.links[0].href);
-        console.log(images);
-        return images;
+
+        if (imageResults.length === 0) {
+          setValidSearch(false);
+        } else {
+          setValidSearch(true);
+          const parsedImages = imageResults.filter(
+            (item) => item.data[0].media_type === "image"
+          );
+          const images = parsedImages.map((image) => image.links[0].href);
+          return images;
+        }
       })
       .catch((err) => {
         console.log(err);
-      })
-      // .finally(() => {
-      //   setLoading(false);
-      // });
+      });
+    // .finally(() => {
+    //   setLoading(false);
+    // });
   }
 };
 
