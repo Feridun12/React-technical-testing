@@ -13,9 +13,10 @@ function SearchResults({ searchResults, validSearch }) {
     return (
       <>
         <div className="image-container">
-          {searchResults.map((image) => (
+          {searchResults.map((image, index) => (
             <img
               className="image"
+              key={index}
               src={image}
               alt="images of the planet that has been searched example: moon pictures"
             />
