@@ -10,6 +10,7 @@ import SearchResults from "./SearchResults";
 function App() {
   //states
   const [searchResults, setSearchResults] = useState([]);
+  const [validSearch, setValidSearch] = useState();
   // const [isLoading, setLoading] = useState(true);
   //
   // useEffect(() => {
@@ -30,8 +31,11 @@ function App() {
         src="https://cdn.cnn.com/cnnnext/dam/assets/200424060716-nasa-worm-logo.jpg"
         alt="nasa logo"
       />
-      <Search setSearchResults={setSearchResults} />
-      <SearchResults results={searchResults} />
+      <Search
+        setSearchResults={setSearchResults}
+        setValidSearch={setValidSearch}
+      />
+      <SearchResults searchResults={searchResults} validSearch={validSearch} />
     </div>
   );
 }

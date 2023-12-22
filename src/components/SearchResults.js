@@ -2,16 +2,18 @@ import React from "react";
 import PropTypes from "prop-types";
 import "../styles/SearchResults.css";
 
-function SearchResults({ results }) {
-  if (results.length < 0) {
+function SearchResults({ searchResults, validSearch }) {
+  if (validSearch === false) {
     return (
-      <p className="result-paraghraph">No results. Please try again later</p>
+      <p className="result-paraghraph">
+        No images found for the given search term.
+      </p>
     );
   } else {
     return (
       <>
         <div className="image-container">
-          {results.map((image) => (
+          {searchResults.map((image) => (
             <img
               className="image"
               src={image}
@@ -25,6 +27,6 @@ function SearchResults({ results }) {
 }
 
 SearchResults.propTypes = {
-  results: PropTypes.array.isRequired,
+  searchResults: PropTypes.array.isRequired,
 };
 export default SearchResults;
