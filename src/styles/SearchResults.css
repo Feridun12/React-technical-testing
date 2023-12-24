@@ -13,9 +13,13 @@
   font-size: 30px;
 }
 
-.image {
+.response-image {
   border-radius: 20px;
   border: 1px solid white;
+  min-width: 250px;
+  min-height: 250px;
+  width: fit-content;
+  height: fit-content;
 }
 
 .loading-effect {
@@ -40,7 +44,7 @@
     margin-right: 40px;
   }
 
-  .image {
+  .response-image {
     display: inline-block;
     width: 100%;
     border-radius: 25px;
@@ -52,19 +56,19 @@
 }
 
 @media screen and (min-device-width: 450px) and (max-device-width: 1000px) {
-  .image {
+  .response-image {
     margin-top: 20px;
   }
 }
 @media screen and (max-device-width: 450px) {
-  .image {
+  .response-image {
     width: 300px;
     margin-top: 20px;
   }
 }
 
 @media screen and (max-device-width: 300px) {
-  .image {
+  .response-image {
     margin-left: 25px;
   }
 }
