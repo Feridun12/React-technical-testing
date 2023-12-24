@@ -3,13 +3,12 @@ import PropTypes from "prop-types";
 import getImages from "../requests/getImages";
 import "../styles/Search.css";
 
-function Search({ setSearchResults, setValidSearch }) {
-  // state
+function Search({ setSearchResults, setValidSearch, setLoading }) {
   const [value, setValue] = useState();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setSearchResults(await getImages(value, setValidSearch));
+    setSearchResults(await getImages(value, setValidSearch, setLoading));
   };
   return (
     <div className="search-section">

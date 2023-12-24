@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const getImages = (value, setValidSearch) => {
-  // setLoading(true);
+const getImages = (value, setValidSearch, setLoading) => {
+  setLoading(true);
   if (!value) {
     return Promise.resolve([]);
   } else {
@@ -23,10 +23,10 @@ const getImages = (value, setValidSearch) => {
       })
       .catch((err) => {
         console.log(err);
+      })
+      .finally(() => {
+        setLoading(false);
       });
-    // .finally(() => {
-    //   setLoading(false);
-    // });
   }
 };
 
