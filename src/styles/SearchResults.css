@@ -18,6 +18,13 @@
   border: 1px solid white;
 }
 
+.loading-effect {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* media queries */
 
 @media screen and (min-device-width: 1000px) {

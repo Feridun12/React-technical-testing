@@ -3,27 +3,12 @@ import React, { useState } from "react";
 // components
 import Search from "./Search";
 import SearchResults from "./SearchResults";
-// Loading effect
-// import getImages from "../requests/getImages";
-// import ScaleLoader from "react-spinners/ScaleLoader";
 
 function App() {
   //states
   const [searchResults, setSearchResults] = useState([]);
   const [validSearch, setValidSearch] = useState();
-  // const [isLoading, setLoading] = useState(true);
-  //
-  // useEffect(() => {
-  //   getImages(query , setLoading);
-  // }, []);
-
-  // if (isLoading) {
-  //   return (
-  //     <div className="loading-effect">
-  //       <ScaleLoader color="black" loading={isLoading} size={50} />
-  //     </div>
-  //   );
-  // }
+  const [loading, setLoading] = useState(false);
   return (
     <div className="App">
       <img
@@ -34,8 +19,14 @@ function App() {
       <Search
         setSearchResults={setSearchResults}
         setValidSearch={setValidSearch}
+        setLoading={setLoading}
+        loading={loading}
       />
-      <SearchResults searchResults={searchResults} validSearch={validSearch} />
+      <SearchResults
+        searchResults={searchResults}
+        validSearch={validSearch}
+        loading={loading}
+      />
     </div>
   );
 }
