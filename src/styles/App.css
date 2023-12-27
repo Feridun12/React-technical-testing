@@ -4,79 +4,27 @@
 }
 
 .nasa-logo {
-  margin: auto;
   margin-top: 20px;
   width: 500px;
   height: 300px;
   border-radius: 20px;
-}
-
-/*Media queries */
-@media screen and (max-device-width: 300px) {
-  .nasa-logo {
-    margin-left: 5px;
-  }
+  -webkit-box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 1);
 }
 
 @media screen and (max-device-width: 450px) {
-  /* logo style */
   .nasa-logo {
-    width: 300px;
+    width: 345px;
   }
 
-  /* Search.js design */
   .search-section {
     margin-top: 50px;
-    padding-left: 20px;
-  }
-
-  .search-btn {
-    margin-left: 10px;
-    width: 40px;
-  }
-}
-
-@media screen and (min-device-width: 450px) and (max-device-width: 1000px) {
-  /* Search.js design */
-  .search-form {
-    margin-top: 50px;
-    padding-left: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .search-btn {
-    margin-left: 20px;
-    width: 40px;
-  }
-
-  .nasa-logo {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  /* .App {
-    width: 105%;
-    height: 100%;
-  }
-
-  body {
-    width: 105%;
-    height: 100%;
-  } */
-  html {
-    min-width: max-content;
   }
 }
 
 @media screen and (min-device-width: 1000px) {
   .search-form {
     margin-top: 20px;
-  }
-
-  .search-btn {
-    margin-left: 20px;
-    width: 10%;
   }
 }
