@@ -17,4 +17,8 @@ code {
     monospace;
 }
 
-
+@media screen and (min-device-width: 450px) and (max-device-width: 1000px) {
+  html {
+    min-width: max-content;
+  }
+}
