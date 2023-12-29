@@ -9,6 +9,7 @@ const getImages = (value, setValidSearch, setLoading) => {
       .get(`https://images-api.nasa.gov/search?q=${value}`)
       .then((response) => {
         const imageResults = response.data.collection.items;
+        console.log(response, "response");
 
         if (imageResults.length === 0) {
           setValidSearch(false);

@@ -31,7 +31,7 @@
 
 /* media queries */
 
-@media screen and (min-device-width: 1000px) {
+@media screen and (min-width: 1000px) {
   .image-container {
     column-count: 3;
     display: inline-block;
@@ -55,19 +55,19 @@
   }
 }
 
-@media screen and (min-device-width: 450px) and (max-device-width: 1000px) {
+@media screen and (min-width: 450px) and (max-width: 1000px) {
   .response-image {
     margin-top: 20px;
   }
 }
-@media screen and (max-device-width: 450px) {
+@media screen and (max-width: 450px) {
   .response-image {
-    width: 300px;
+    width: 100%;
     margin-top: 20px;
   }
 }
 
-@media screen and (max-device-width: 300px) {
+@media screen and (max-width: 300px) {
   .response-image {
     margin-left: 25px;
   }
