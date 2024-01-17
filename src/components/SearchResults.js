@@ -1,9 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ScaleLoader from "react-spinners/ScaleLoader";
+import { useNavigate } from "react-router-dom";
 import "../styles/SearchResults.css";
 
 function SearchResults({ searchResults, validSearch, loading }) {
+  const navigate = useNavigate();
+
+  const handleImageClick = (id) => {
+    // console.log(id);
+    navigate(`/images/${id}`);
+  };
   return (
     <>
       {loading === true ? (
@@ -24,7 +31,7 @@ function SearchResults({ searchResults, validSearch, loading }) {
               alt="images of the planet that has been searched example: moon pictures"
               loading="lazy"
               onClick={() => {
-                console.log(imageData, "Image Data");
+                handleImageClick(imageData.data[0].nasa_id);
               }}
             />
           ))}
