@@ -16,13 +16,16 @@ function SearchResults({ searchResults, validSearch, loading }) {
         </p>
       ) : (
         <div className="image-container">
-          {searchResults.map((image, index) => (
+          {searchResults.map((imageData, index) => (
             <img
               className="response-image"
               key={index}
-              src={image}
+              src={imageData.links[0].href}
               alt="images of the planet that has been searched example: moon pictures"
               loading="lazy"
+              onClick={() => {
+                console.log(imageData, "Image Data");
+              }}
             />
           ))}
         </div>

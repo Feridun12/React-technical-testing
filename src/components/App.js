@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Home from "./Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Home";
+import ImageDetails from "./ImageDetails";
 import "../styles/App.css";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             />
           }
         />
+        <Route path="/images/:id" element={<ImageDetails />} />
       </Routes>
     </BrowserRouter>
   );
