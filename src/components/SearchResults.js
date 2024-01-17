@@ -2,14 +2,17 @@ import React from "react";
 import PropTypes from "prop-types";
 import ScaleLoader from "react-spinners/ScaleLoader";
 import { useNavigate } from "react-router-dom";
+import useImageDataContext from "../custom-hooks/useImageDataContext";
 import "../styles/SearchResults.css";
 
 function SearchResults({ searchResults, validSearch, loading }) {
   const navigate = useNavigate();
+  // we get the state from the context since SearchResults is a children of ContextProvider component
+  const { setImageData } = useImageDataContext();
 
-  const handleImageClick = (id) => {
-    // console.log(id);
+  const handleImageClick = (id, imageData) => {
     navigate(`/images/${id}`);
+    setImageData(imageData);
   };
   return (
     <>
@@ -31,7 +34,7 @@ function SearchResults({ searchResults, validSearch, loading }) {
               alt="images of the planet that has been searched example: moon pictures"
               loading="lazy"
               onClick={() => {
-                handleImageClick(imageData.data[0].nasa_id);
+                handleImageClick(imageData.data[0].nasa_id, imageData);
               }}
             />
           ))}
