@@ -8,11 +8,12 @@ import "../styles/SearchResults.css";
 function SearchResults({ searchResults, validSearch, loading }) {
   const navigate = useNavigate();
   // we get the state from the context since SearchResults is a children of ContextProvider component
-  const { setImageData } = useImageDataContext();
+  // const { setImageData } = useImageDataContext();
 
   const handleImageClick = (id, imageData) => {
+    // storing the image data in the session so a refresh in the ImageDetails wont crash the page
+    sessionStorage.setItem("imageData", JSON.stringify(imageData));
     navigate(`/images/${id}`);
-    setImageData(imageData);
   };
   return (
     <>
