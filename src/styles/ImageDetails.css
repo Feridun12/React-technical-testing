@@ -1,5 +1,46 @@
 .image-details {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-title {
+  width: 90%;
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.detail-image {
+  width: 90%;
+  height: 45%;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 1);
+}
+
+.image-description {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: max-content;
+  max-height: 150px;
+  overflow: scroll;
+  color: black;
   background-color: white;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
