@@ -7,8 +7,6 @@ function ImageDetails() {
   const navigate = useNavigate();
   const sessionData = JSON.parse(sessionStorage.getItem("imageData"));
 
-  console.log(sessionData, "sessionData");
-
   return (
     <div className="image-details">
       <div className="return-to-results-wrapper">
