@@ -15,6 +15,8 @@
   font-family: "Orbitron", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  margin-top: 5px;
+  margin-bottom: 0;
 }
 
 .detail-image {
@@ -43,4 +45,25 @@
   font-family: "Orbitron", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+}
+
+.return-to-main-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.return-img-text-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 215px;
+  margin-left: 10px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid white;
+}
+.arrow-back {
+  filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(138deg)
+    brightness(104%) contrast(101%);
 }
