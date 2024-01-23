@@ -12,3 +12,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* using the same font for every text in the project to follow the
+same text design. */
+* {
+  font-family: "Orbitron", sans-serif;
+}

@@ -12,7 +12,6 @@
 .image-title {
   width: 90%;
   text-align: center;
-  font-family: "Orbitron", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   margin-top: 5px;
@@ -28,7 +27,7 @@
   box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 1);
 }
 
-.image-description {
+.image-description-wrapper {
   width: 90%;
   display: flex;
   align-items: center;
@@ -40,11 +39,13 @@
   background-color: white;
   border-radius: 20px;
   text-align: center;
-  font-size: 16px;
   padding: 10px;
-  font-family: "Orbitron", sans-serif;
+}
+
+.image-description {
   font-optical-sizing: auto;
   font-style: normal;
+  font-size: 16px;
 }
 
 .return-to-main-wrapper {

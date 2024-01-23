@@ -33,8 +33,8 @@ function ImageDetails() {
         src={sessionData.links[0].href}
         alt={sessionData.data[0].description}
       />
-      <div className="image-description">
-        <p>{sessionData.data[0].description}</p>
+      <div className="image-description-wrapper">
+        <p className="image-description">{sessionData.data[0].description}</p>
       </div>
     </div>
   );
