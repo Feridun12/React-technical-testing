@@ -11,9 +11,9 @@ function ImageDetails() {
 
   return (
     <div className="image-details">
-      <div className="return-to-main-wrapper">
-        <div
-          className="return-img-text-wrapper"
+      <div className="return-to-results-wrapper">
+        <button
+          className="return-results-button"
           onClick={() => {
             navigate("/");
           }}
@@ -23,8 +23,8 @@ function ImageDetails() {
             alt="an arrow facing left"
             className="arrow-back"
           />
-          <span>Return back to the results </span>
-        </div>
+          <span className="return-results-text">Return to results </span>
+        </button>
       </div>
       <h1 className="image-title">{sessionData.data[0].title}</h1>
       <img

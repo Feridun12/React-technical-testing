@@ -30,8 +30,6 @@
   justify-content: center;
 }
 
-/* media queries */
-
 @media screen and (min-width: 1000px) {
   .image-container {
     column-count: 3;
