@@ -8,11 +8,10 @@ function ImageDetails() {
 
   return (
     <div className="image-details">
-      <h1 className="image-title">
-        {/* Title:
-        <br></br> */}
-        {sessionData.data[0].title}
-      </h1>
+      <div className="return-to-main-wrapper">
+        <img />
+      </div>
+      <h1 className="image-title">{sessionData.data[0].title}</h1>
       <img
         // just putting image as a classname felt a bit too broad
         className="detail-image"
