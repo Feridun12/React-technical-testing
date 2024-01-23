@@ -1,28 +1,36 @@
-import "../styles/App.css";
 import React, { useState } from "react";
-import Search from "./Search";
-import SearchResults from "./SearchResults";
-import NasaLogo from "./NasaLogo";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Home";
+import ImageDetails from "./ImageDetails";
+import ContextProvider from "../provider/ContextProvider";
+import "../styles/App.css";
 
 function App() {
   const [searchResults, setSearchResults] = useState([]);
   const [validSearch, setValidSearch] = useState();
   const [loading, setLoading] = useState(false);
+
   return (
-    <div className="App">
-      <NasaLogo />
-      <Search
-        setSearchResults={setSearchResults}
-        setValidSearch={setValidSearch}
-        setLoading={setLoading}
-        loading={loading}
-      />
-      <SearchResults
-        searchResults={searchResults}
-        validSearch={validSearch}
-        loading={loading}
-      />
-    </div>
+    <ContextProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                setSearchResults={setSearchResults}
+                searchResults={searchResults}
+                setValidSearch={setValidSearch}
+                setLoading={setLoading}
+                loading={loading}
+                validSearch={validSearch}
+              />
+            }
+          />
+          <Route path="/images/:id" element={<ImageDetails />} />
+        </Routes>
+      </BrowserRouter>
+    </ContextProvider>
   );
 }
 

@@ -9,7 +9,6 @@ const getImages = (value, setValidSearch, setLoading) => {
       .get(`https://images-api.nasa.gov/search?q=${value}`)
       .then((response) => {
         const imageResults = response.data.collection.items;
-        console.log(response, "response");
 
         if (imageResults.length === 0) {
           setValidSearch(false);
@@ -18,8 +17,7 @@ const getImages = (value, setValidSearch, setLoading) => {
           const parsedImages = imageResults.filter(
             (item) => item.data[0].media_type === "image"
           );
-          const images = parsedImages.map((image) => image.links[0].href);
-          return images;
+          return parsedImages;
         }
       })
       .catch((err) => {

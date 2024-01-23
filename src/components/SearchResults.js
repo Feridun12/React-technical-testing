@@ -1,9 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ScaleLoader from "react-spinners/ScaleLoader";
+import { useNavigate } from "react-router-dom";
 import "../styles/SearchResults.css";
 
 function SearchResults({ searchResults, validSearch, loading }) {
+  const navigate = useNavigate();
+
+  const handleImageClick = (id, imageData) => {
+    // storing the image data in the session so a refresh in the ImageDetails component wont crash the page
+    sessionStorage.setItem("imageData", JSON.stringify(imageData));
+    navigate(`/images/${id}`);
+  };
   return (
     <>
       {loading === true ? (
@@ -16,13 +24,16 @@ function SearchResults({ searchResults, validSearch, loading }) {
         </p>
       ) : (
         <div className="image-container">
-          {searchResults.map((image, index) => (
+          {searchResults.map((imageData, index) => (
             <img
               className="response-image"
               key={index}
-              src={image}
+              src={imageData.links[0].href}
               alt="images of the planet that has been searched example: moon pictures"
               loading="lazy"
+              onClick={() => {
+                handleImageClick(imageData.data[0].nasa_id, imageData);
+              }}
             />
           ))}
         </div>

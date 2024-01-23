@@ -5,10 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("./images/222a0332bd69330e9ac4109495a420ca.jpeg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  background-image: url("../images/space.jpeg");
 }
 
 code {
@@ -16,8 +13,9 @@ code {
     monospace;
 }
 
-@media screen and (min-width: 450px) and (max-width: 1000px) {
-  html {
-    min-width: max-content;
-  }
+/* using the same font for every text in the project to follow the
+same text design. */
+* {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 500;
 }
