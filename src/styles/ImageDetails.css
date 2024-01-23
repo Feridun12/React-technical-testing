@@ -29,23 +29,25 @@
 
 .image-description-wrapper {
   width: 90%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   height: max-content;
   max-height: 150px;
-  overflow: scroll;
+  overflow: auto;
   color: black;
   background-color: white;
   border-radius: 20px;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
 }
 
 .image-description {
   font-optical-sizing: auto;
   font-style: normal;
   font-size: 16px;
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: fit-content;
 }
 
 .return-to-main-wrapper {
@@ -53,13 +55,14 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .return-img-text-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 215px;
+  width: 265px;
   margin-left: 10px;
   padding-bottom: 3px;
   border-bottom: 1px solid white;
