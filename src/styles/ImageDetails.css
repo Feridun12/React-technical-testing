@@ -73,6 +73,7 @@
   border: none;
   transition: all 0.5s ease;
 }
+
 .return-results-button:hover {
   -webkit-box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 1);
   -moz-box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 1);
@@ -83,11 +84,23 @@
   width: 25px;
   height: 25px;
 }
+
 .return-results-text {
   margin-left: 15px;
   margin-right: 5px;
   font-size: 16px;
   color: black;
+}
+
+@media screen and (max-width: 425px) {
+  .detail-image {
+    width: 95%;
+    height: 50%;
+  }
+
+  .image-description-wrapper {
+    width: 95%;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
