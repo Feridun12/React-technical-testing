@@ -1,7 +1,7 @@
 /* Custom properties */
 :root {
-  --tooltip-text-color: white;
-  --tooltip-background-color: black;
+  --tooltip-text-color: rgb(0, 0, 0);
+  --tooltip-background-color: rgb(255, 255, 255);
   --tooltip-margin: 30px;
   --tooltip-arrow-size: 6px;
 }
@@ -21,11 +21,13 @@
   padding: 6px;
   color: var(--tooltip-text-color);
   background: var(--tooltip-background-color);
-  font-size: 14px;
+  font-size: 18px;
   font-family: sans-serif;
   line-height: 1;
   z-index: 100;
   white-space: nowrap;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 500;
 }
 
 /* CSS border triangles */

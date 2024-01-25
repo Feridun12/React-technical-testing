@@ -21,6 +21,7 @@
   max-width: 100%;
   width: fit-content;
   height: fit-content;
+  cursor: pointer;
 }
 
 .loading-effect {

@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import ScaleLoader from "react-spinners/ScaleLoader";
 import { useNavigate } from "react-router-dom";
+import Tooltip from "../tools/Tooltip";
 import "../styles/SearchResults.css";
 
 function SearchResults({ searchResults, validSearch, loading }) {
@@ -25,16 +26,18 @@ function SearchResults({ searchResults, validSearch, loading }) {
       ) : (
         <div className="image-container">
           {searchResults.map((imageData, index) => (
-            <img
-              className="response-image"
-              key={index}
-              src={imageData.links[0].href}
-              alt="images of the planet that has been searched example: moon pictures"
-              loading="lazy"
-              onClick={() => {
-                handleImageClick(imageData.data[0].nasa_id, imageData);
-              }}
-            />
+            <Tooltip content="Click on me to learn more!" direction="top">
+              <img
+                className="response-image"
+                key={index}
+                src={imageData.links[0].href}
+                alt="images of the planet that has been searched example: moon pictures"
+                loading="lazy"
+                onClick={() => {
+                  handleImageClick(imageData.data[0].nasa_id, imageData);
+                }}
+              />
+            </Tooltip>
           ))}
         </div>
       )}
