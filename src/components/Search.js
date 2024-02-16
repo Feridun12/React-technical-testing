@@ -18,6 +18,7 @@ function Search({ setSearchResults, setValidSearch, setLoading }) {
         type="text"
         className="search-input"
         data-testid="search-input"
+        required="true"
       />
       <button type="submit" className="search-btn" data-testid="search-btn">
         Go!
